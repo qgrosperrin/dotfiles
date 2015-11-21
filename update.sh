@@ -5,4 +5,4 @@ rsync -avh `echo ${dotfiles}` .
 
 git add --all
 git commit -am "updating dotfiles"
-#git push origin master
+git push origin master
