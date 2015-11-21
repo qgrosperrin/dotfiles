@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh 
 
-dotfiles="~/.zshrc ~/.zshuery ~/.bash_profile ~/.tmux.conf"
+dotfiles="$HOME/.zshrc $HOME/.zshuery $HOME/.bash_profile $HOME/.tmux.conf"
 rsync -avh `echo ${dotfiles}` .
 
 git add --all
