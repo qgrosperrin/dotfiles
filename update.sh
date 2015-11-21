@@ -1,6 +1,4 @@
-for i in $(ls ~/.dotfiles); do
-	echo "rsync -avh --no-perms '~/'$i ."
-done;
+rsync -avh --no-perms --exclude "bootstrap.sh" --exclude "update.sh" `ls -a ~/.dotfiles` ~/.dotfiles
 
 git add *
 git commit -m "updating dotfiles"
