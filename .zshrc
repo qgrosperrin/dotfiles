@@ -49,23 +49,3 @@ RPROMPT="%{$fg[cyan]%}%D{%d-%m-%Y} [%*]%{$reset_color%}"
 unset collapse_pwd
 unset branch_name
 
-# Setting up PATH variables
-export PATH=$PATH:/opt/local/bin/
-export PATH=$PATH:/opt/local/sbin/
-export PATH=$PATH:/Applications/AndroidSDK/sdk/tools:/Applications/AndroidSDK/sdk/platform-tools:/Applications/AndroidSDK/sdk/build-tools/android-4.4W
-export PATH=$PATH:/Users/gds/Documents/resources/tools/mobile/android/apktool
-export PATH=$PATH:/opt/mongodb/bin
-export PATH=$PATH:/opt/theos/bin:/opt/theos/bin/ldid
-export PATH=$PATH:/usr/local/sbin
-export PATH=$PATH:/Applications/HP_Fortify/HP_Fortify_SCA_and_Apps_4.21/bin
-
-export THEOS=/opt/theos
-export THEOS_DEVICE_IP=127.0.0.1 THEOS_DEVICE_PORT=2222
-
-export GRADLE_HOME=/opt/local/share/java/gradle
-export PATH=$PATH:GRADLE_HOME/bin
-
-export LESS=-m
-export GREP_OPTIONS='--color=always'
-export CLICOLOR=1
-export LSCOLORS=GxFxCxDxBxegedabagaced
