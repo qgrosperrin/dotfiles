@@ -3,8 +3,8 @@
 git pull origin master;
 
 function doIt() {
-	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" --exclude "update.sh" \
-		--exclude "README.md" -avh --no-perms . ~;
+	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" \
+    --exclude "push-update.sh" --exclude "README.md" -avh --no-perms . ~;
 	source ~/.zshrc;
 }
 
