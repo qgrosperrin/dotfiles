@@ -12,11 +12,10 @@ load_correction
 alias rake="noglob rake"
 alias rake1.9="noglob rake1.9"
 
-alias -g nmap="nmap --reason --open"
 alias -g ll="ls -lsah"
 alias -g mkdir="mkdir -vp"
 
-alias -g resources="~/Documents/resources"
+alias -g resources="~/Dropbox/resources"
 
 alias ssh-nyi3l="ssh -p 26961 qgrosperrin@nyi3l.gdssecurity.com"
 alias ssh-nyi4l="ssh -p 26961 qgrosperrin@nyi4l.gdssecurity.com"
