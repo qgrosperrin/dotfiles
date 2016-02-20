@@ -8,6 +8,7 @@ set shiftwidth=4
 set showmatch     " set show matching parenthesis
 
 filetype plugin indent on
+set pastetoggle=<F2>
 
 " Numbers
 set number
