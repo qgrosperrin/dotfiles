@@ -27,7 +27,7 @@ function end-of-line() { echo "CTRL+E mfer !"; }
 function beginning-of-line() { echo "CTRL+A mfer !"; }
 
 function txt() { 
-	grep -i -r "${1:-8000}" ~/Documents/resources/cheat_sheets/txt; 
+	grep -i -r "${1:-8000}" ~/Dropbox/resources/cheat_sheets/txt; 
 }
 
 function gds() { 
