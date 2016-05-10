@@ -7,7 +7,6 @@ load_aliases
 load_completion ~/.zshuery/completion/src
 load_correction
 
-#test
 # Setting up aliases
 alias rake="noglob rake"
 alias rake1.9="noglob rake1.9"
@@ -17,10 +16,20 @@ alias -g mkdir="mkdir -vp"
 
 alias -g resources="~/Dropbox/resources"
 
+alias clean-aliases="unalias -m '*'"
+
+alias ssh-nyi2l="ssh -p 26961 qgrosperrin@nyi2l.gdssecurity.com"
 alias ssh-nyi3l="ssh -p 26961 qgrosperrin@nyi3l.gdssecurity.com"
-alias ssh-nyi4l="ssh -p 26961 qgrosperrin@nyi4l.gdssecurity.com"
+alias ssh-nyi2nm="ssh -p 26961 qgrosperrin@nyi2nm.gdssecurity.com"
+alias scp-nyi2l="scp -pr -P 26961 qgrosperrin@nyi2l.gdssecurity.com:"
 alias scp-nyi3l="scp -pr -P 26961 qgrosperrin@nyi3l.gdssecurity.com:"
-alias scp-nyi4l="scp -pr -P 26961 qgrosperrin@nyi4l.gdssecurity.com:"
+alias scp-nyi2nm="scp -pr -P 26961 qgrosperrin@nyi2nm.gdssecurity.com:"
+
+alias nmap-full-tcp-connect-version="nmap -sTV -p- --open --reason -v -Pn"
+alias nmap-1000-tcp-connect-version="nmap -sTV --open --reason -v -Pn"
+alias nmap-full-udp="sudo nmap -sU -p- --open -v -Pn"
+alias nmap-1000-udp="sudo nmap -sU --open -v -Pn"
+
 
 alias en0="ifconfig en0 | grep \"inet \" | grep -v 127.0.0.1 | cut -d\  -f2"
 alias en1="ifconfig en1 | grep \"inet \" | grep -v 127.0.0.1 | cut -d\  -f2"

@@ -15,6 +15,7 @@ export THEOS_DEVICE_IP=127.0.0.1 THEOS_DEVICE_PORT=2222
 export GRADLE_HOME=/opt/local/share/java/gradle
 export PATH=$PATH:GRADLE_HOME/bin
 
+export HOMEBREW_NO_ANALYTICS=1
 export LESS=-m
 export GREP_OPTIONS='--color=always'
 export CLICOLOR=1
@@ -38,6 +39,16 @@ function gds() {
 		echo "$d" ;
 		cd "$d" 2> /dev/null ;
 	fi
+}
+
+function gds_update() {
+	pushd . ;
+	for i in `ls -d ~/Documents/Work/Projects/GDS-*` ;
+	do 
+		cd $i ;
+		svn up ;
+	done ;
+	popd ;
 }
 
 function log() {
