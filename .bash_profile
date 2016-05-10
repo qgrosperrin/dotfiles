@@ -22,6 +22,7 @@ export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
 source $HOME/.powershell_helpers
+source $HOME/.gds_dotfile
 
 # Helper functions
 function end-of-line() { echo "CTRL+E mfer !"; }
@@ -29,26 +30,6 @@ function beginning-of-line() { echo "CTRL+A mfer !"; }
 
 function txt() { 
 	grep -i -r "${1:-8000}" ~/Dropbox/resources/cheat_sheets/txt; 
-}
-
-function gds() { 
-	if [ -z "$@" ]; then
-		cd ~/Documents/Work/Projects/
-	else
-		local d=`ls -d ~/Documents/Work/Projects/*$@*`;
-		echo "$d" ;
-		cd "$d" 2> /dev/null ;
-	fi
-}
-
-function gds_update() {
-	pushd . ;
-	for i in `ls -d ~/Documents/Work/Projects/GDS-*` ;
-	do 
-		cd $i ;
-		svn up ;
-	done ;
-	popd ;
 }
 
 function log() {

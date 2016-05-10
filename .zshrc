@@ -18,13 +18,6 @@ alias -g resources="~/Dropbox/resources"
 
 alias clean-aliases="unalias -m '*'"
 
-alias ssh-nyi2l="ssh -p 26961 qgrosperrin@nyi2l.gdssecurity.com"
-alias ssh-nyi3l="ssh -p 26961 qgrosperrin@nyi3l.gdssecurity.com"
-alias ssh-nyi2nm="ssh -p 26961 qgrosperrin@nyi2nm.gdssecurity.com"
-alias scp-nyi2l="scp -pr -P 26961 qgrosperrin@nyi2l.gdssecurity.com:"
-alias scp-nyi3l="scp -pr -P 26961 qgrosperrin@nyi3l.gdssecurity.com:"
-alias scp-nyi2nm="scp -pr -P 26961 qgrosperrin@nyi2nm.gdssecurity.com:"
-
 alias nmap-full-tcp-connect-version="nmap -sTV -p- --open --reason -v -Pn"
 alias nmap-1000-tcp-connect-version="nmap -sTV --open --reason -v -Pn"
 alias nmap-full-udp="sudo nmap -sU -p- --open -v -Pn"
