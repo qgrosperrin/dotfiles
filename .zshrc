@@ -1,5 +1,3 @@
-alias tmux="TERM=screen-256color-bce tmux"
-
 source ~/.bash_profile
 source ~/.profile
 source ~/.zshuery/zshuery.sh
@@ -28,9 +26,9 @@ alias nmap-1000-udp="sudo nmap -sU --open -v -Pn"
 alias en0="ifconfig en0 | grep \"inet \" | grep -v 127.0.0.1 | cut -d\  -f2"
 alias en1="ifconfig en1 | grep \"inet \" | grep -v 127.0.0.1 | cut -d\  -f2"
 
-#bindkey -e
-#bindkey '\e[1;9D' forward-word
-#bindkey '\e[1;9C' backward-word
+bindkey -e
+bindkey '^[[1;9D' forward-word
+bindkey '^[[1;9C' backward-word
 
 # Autocompletion of aliases
 zstyle ':completion:*' completer _expand_alias _complete _ignored

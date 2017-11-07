@@ -19,7 +19,7 @@ export PATH=$PATH:GRADLE_HOME/bin
 
 export HOMEBREW_NO_ANALYTICS=1
 export LESS=-m
-export GREP_OPTIONS='--color=always'
+export GREP_OPTIONS='--color=auto'
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
@@ -32,6 +32,25 @@ function beginning-of-line() { echo "CTRL+A mfer !"; }
 
 function txt() { 
 	grep -i -r "${1:-8000}" ~/Dropbox/resources/cheat_sheets/txt; 
+}
+
+function update-repos() {
+    pushd .
+    for i in `find ~/Dropbox/resources/tools/red_team -name .git -type d -prune -exec dirname {} \;`
+    do
+        cd $i
+
+        BRANCH=$(git rev-parse --abbrev-ref HEAD)
+		if [[ "$BRANCH" != "master" ]]; then
+		  echo "Aborting update for `pwd`. Not in master branch"
+		  continue
+		fi
+
+        git pull
+        URL=$(git config --get remote.origin.url 2>&1)
+        echo "Updating ${URL} ..."
+    done
+    popd
 }
 
 function log() {
