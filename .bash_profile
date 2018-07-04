@@ -17,6 +17,8 @@ export THEOS_DEVICE_IP=127.0.0.1 THEOS_DEVICE_PORT=2222
 export GRADLE_HOME=/opt/local/share/java/gradle
 export PATH=$PATH:GRADLE_HOME/bin
 
+export PYTHONPATH=/usr/local/lib/python2.7/site-packages
+
 export HOMEBREW_NO_ANALYTICS=1
 export LESS=-m
 export GREP_OPTIONS='--color=auto'
@@ -78,3 +80,6 @@ man() {
 }
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+
+export PATH="/Applications/HPE_Security/Fortify_SCA_and_Apps_17.10/bin:$PATH"
