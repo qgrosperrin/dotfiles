@@ -25,7 +25,7 @@ export GREP_OPTIONS='--color=auto'
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
-source $HOME/.powershell_helpers
+source $HOME/.redteam_helpers
 source $HOME/.gds_dotfile
 
 # Helper functions
@@ -37,8 +37,9 @@ function txt() {
 }
 
 function update-repos() {
+    echo "[!] This may break some install (e.g. Veil). Watch out !!"
     pushd .
-    for i in `find ~/Dropbox/resources/tools/red_team -name .git -type d -prune -exec dirname {} \;`
+    for i in `find ~/tools/red_team -name .git -type d -prune -exec dirname {} \;`
     do
         cd $i
 
