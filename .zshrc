@@ -1,5 +1,4 @@
 source ~/.bash_profile
-source ~/.profile
 source ~/.zshuery/zshuery.sh
 load_defaults
 load_aliases
@@ -22,6 +21,8 @@ alias nmap-1000-tcp-connect-version="nmap -sTV --open --reason -v -Pn"
 alias nmap-full-udp="sudo nmap -sU -p- --open -v -Pn"
 alias nmap-1000-udp="sudo nmap -sU --open -v -Pn"
 
+alias neo4j-console="/Applications/Neo4j/neo4j-community-3.5.7/bin/neo4j console &> /dev/null &"
+alias chrome-nocertvalidation="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --ignore-certificate-errors &> /dev/null &"
 
 alias en0="ifconfig en0 | grep \"inet \" | grep -v 127.0.0.1 | cut -d\  -f2"
 alias en1="ifconfig en1 | grep \"inet \" | grep -v 127.0.0.1 | cut -d\  -f2"
@@ -59,3 +60,6 @@ PERL_MM_OPT="INSTALL_BASE=/Users/gds/perl5"; export PERL_MM_OPT;
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+

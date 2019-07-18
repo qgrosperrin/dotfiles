@@ -42,17 +42,3 @@ set backspace=indent,eol,start
 
 " Always use vertical diffs
 set diffopt+=vertical
-
-let firstrun = 0
-if !filereadable(expand('~/.vim/autoload/plug.vim'))
-    let firstrun = 1
-    echo "Installing Plug"
-    silent !curl -sfLo ~/.vim/autoload/plug.vim https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-endif
-
-call plug#begin('~/.vim/plugged')
-Plug 'vim-scripts/OmniCppComplete'
-call plug#end()
-if firstrun
-        :PlugInstall
-endif

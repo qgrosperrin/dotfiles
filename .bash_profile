@@ -1,4 +1,5 @@
 # Setting up PATH variables
+export PATH=/usr/local/bin:$PATH
 export PATH=$PATH:/opt/local/bin/
 export PATH=$PATH:/opt/local/sbin/
 export PATH=$PATH:/Users/gds/Library/Android/sdk/platform-tools:/Users/gds/Library/Android/sdk/tools
