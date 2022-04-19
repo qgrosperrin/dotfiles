@@ -21,8 +21,13 @@ alias nmap-1000-tcp-connect-version="nmap -sTV --open --reason -v -Pn"
 alias nmap-full-udp="sudo nmap -sU -p- --open -v -Pn"
 alias nmap-1000-udp="sudo nmap -sU --open -v -Pn"
 
+alias bragi="unset PYTHONPATH; bragi"
+alias list-open-ports="sudo lsof -nP +c 15 | grep LISTEN"
+
 alias neo4j-console="/Applications/Neo4j/neo4j-community-3.5.7/bin/neo4j console &> /dev/null &"
 alias chrome-nocertvalidation="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --ignore-certificate-errors &> /dev/null &"
+
+alias dotnet-tools="find /Users/gds/tools/red_team -type d -name Confused ! -type l -exec find {} -name 'test.exe' \; 2>/dev/null"
 
 alias en0="ifconfig en0 | grep \"inet \" | grep -v 127.0.0.1 | cut -d\  -f2"
 alias en1="ifconfig en1 | grep \"inet \" | grep -v 127.0.0.1 | cut -d\  -f2"

@@ -40,5 +40,3 @@ set clipboard=unnamed
 nnoremap ; :
 set backspace=indent,eol,start
 
-" Always use vertical diffs
-set diffopt+=vertical
